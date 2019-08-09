@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Párametros de conexión">
+        <EditTextPreference android:key="svcApiFirst" android:title="APIFirst" android:defaultValue="" android:inputType="text"/>
+        <EditTextPreference android:key="ownerAF" android:title="Usuario" android:defaultValue="" android:inputType="text" android:password="true"/>
+        <EditTextPreference android:key="tokenAF" android:title="Contraseña" android:defaultValue="" android:inputType="text" android:password="true"/>
+        <EditTextPreference android:key="key" android:title="Key" android:defaultValue="" android:inputType="text" android:password="true"/>
+        <EditTextPreference android:key="iv" android:title="Iv" android:defaultValue="" android:inputType="text" android:password="true"/>
+    </PreferenceCategory>
+</PreferenceScreen>
