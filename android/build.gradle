@@ -1,4 +1,4 @@
-group 'com.example.app_preferences_flutter'
+group 'com.danielisho.app_preferences_flutter'
 version '1.0-SNAPSHOT'
 
 buildscript {

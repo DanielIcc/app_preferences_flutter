@@ -1,4 +1,4 @@
-package com.example.app_preferences_flutter;
+package com.danielisho.app_preferences_flutter;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
