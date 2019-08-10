@@ -1,10 +1,14 @@
 import 'package:flutter/services.dart';
 
-class AppPreferencesFlutter {
-  static const MethodChannel _channel =
-      const MethodChannel('app_preferences_flutter');
+const MethodChannel _channel = MethodChannel('app_preferences_flutter');
 
+class AppPreferencesFlutter {
   static get openPreferences async {
     await _channel.invokeMethod('openPreferences');
+  }
+
+  static Future<dynamic> getValue(String key) async {
+    dynamic value = await _channel.invokeMethod('getValue', key);
+    return value;
   }
 }

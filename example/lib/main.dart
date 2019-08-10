@@ -9,6 +9,10 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  String a = "";
+  bool b = false;
+  String c = "";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,18 +20,41 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Preferences screen plugin'),
         ),
-        body: Center(
-          child: Text('Tap button'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            AppPreferencesFlutter.openPreferences;
-          },
-          child: Icon(Icons.settings),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Center(
+              child: Text(a),
+            ),
+            Center(
+              child: Text(b.toString()),
+            ),
+            Center(
+              child: Text(c ?? ""),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
+            ),
+            RaisedButton(
+              child: Text("Open preferences screen"),
+              onPressed: () => AppPreferencesFlutter.openPreferences,
+            ),
+            RaisedButton(
+              child: Text("Get values"),
+              onPressed: () async {
+                a = await AppPreferencesFlutter.getValue("text_preference");
+                b = await AppPreferencesFlutter.getValue(
+                        "enabled_preference") ==
+                    "true";
+                c = await AppPreferencesFlutter.getValue(
+                    "text_password_preference");
+                setState(() {});
+              },
+            ),
+          ],
         ),
       ),
     );
   }
-
-  
 }

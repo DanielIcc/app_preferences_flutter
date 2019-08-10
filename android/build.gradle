@@ -2,6 +2,7 @@ group 'com.danielisho.app_preferences_flutter'
 version '1.0-SNAPSHOT'
 
 buildscript {
+    ext.kotlin_version = '1.2.71'
     repositories {
         google()
         jcenter()
@@ -9,6 +10,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
@@ -20,6 +22,7 @@ rootProject.allprojects {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 28
@@ -31,4 +34,8 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }

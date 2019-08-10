@@ -1,14 +1,20 @@
 # app_preferences_flutter
 
-A new flutter plugin project.
+Plugin for open and save native preferences on Android, TODO: iOS version
+
+
+## Android Prerequisites
+* In Project/Android/app/src/main/res/xml create [preferences.xml](https://github.com/DanielIcc/app_preferences_flutter/blob/master/example/android/app/src/main/res/xml/preferences.xml)
+* Android [PreferenceScreen docs](https://developer.android.com/reference/android/preference/PreferenceScreen.html)
 
 ## Getting Started
+   
+| Property |   Description |
+| ---  | --- |
+| AppPreferencesFlutter.openPreferences(); |  Opens the native settings |
+| AppPreferencesFlutter.getValue(String key); |  Gets the value for the preference |
+    
+## License
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+Apache License Version 2.0, August 2019
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
