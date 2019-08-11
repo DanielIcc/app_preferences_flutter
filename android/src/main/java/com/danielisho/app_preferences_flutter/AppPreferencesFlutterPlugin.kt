@@ -11,6 +11,10 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.PluginRegistry
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
+
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
 class AppPreferencesFlutterPlugin(val activity: Activity): MethodCallHandler {
   companion object {
     @JvmStatic
@@ -28,17 +32,24 @@ class AppPreferencesFlutterPlugin(val activity: Activity): MethodCallHandler {
     if (call.method.equals("openPreferences")) {      
         showPreferences()
     } else if (call.method.equals("getValue")) {
-        result.success(call.arguments.toString())
+        val value = getValue(call.arguments.toString())
+        result.success(value)
     } else {
       result.notImplemented()
     }
   }
 
-    private fun showPreferences() {
-        val intent = Intent(activity, PreferencesActivity::class.java)
-        activity.startActivityForResult(intent, 100)
-    }
+  private fun showPreferences() {
+    val intent = Intent(activity, PreferencesActivity::class.java)
+    activity.startActivityForResult(intent, 100)
+    
+  }
 
+  private fun getValue(key: String): String {
+      val preferencias = PreferenceManager.getDefaultSharedPreferences(activity)
+      val allPrefs = preferencias.all
+      return allPrefs[key]!!.toString()
+  }
 
 
 }

@@ -10,8 +10,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String a = "";
-  bool b = false;
+  String b = "";
   String c = "";
+  String d = "";
+  String e = "";
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +26,9 @@ class _MyAppState extends State<MyApp> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Center(
-              child: Text(a),
-            ),
-            Center(
-              child: Text(b.toString()),
-            ),
-            Center(
-              child: Text(c ?? ""),
-            ),
+            Center(child: Text(a.toString())),
+            Center(child: Text(b.toString())),
+            Center(child: Text(c.toString())),
             Padding(
               padding: EdgeInsets.all(10),
             ),
@@ -44,11 +40,8 @@ class _MyAppState extends State<MyApp> {
               child: Text("Get values"),
               onPressed: () async {
                 a = await AppPreferencesFlutter.getValue("text_preference");
-                b = await AppPreferencesFlutter.getValue(
-                        "enabled_preference") ==
-                    "true";
-                c = await AppPreferencesFlutter.getValue(
-                    "text_password_preference");
+                b = await AppPreferencesFlutter.getValue("enabled_preference");
+                c = await AppPreferencesFlutter.getValue("text_password_preference");
                 setState(() {});
               },
             ),

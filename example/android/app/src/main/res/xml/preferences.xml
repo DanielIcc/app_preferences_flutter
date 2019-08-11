@@ -1,13 +1,8 @@
-<androidx.preference.PreferenceScreen
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" 
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <SwitchPreferenceCompat
-        app:key="notifications"
-        app:title="Switch preference"/>
-
-    <Preference
-        app:key="feedback"
-        app:title="Send feedback"
-        app:summary="Report technical issues or suggest new features"/>
-
+    <PreferenceCategory app:iconSpaceReserved="false" android:title="Example Category">
+        <EditTextPreference app:iconSpaceReserved="false" android:key="text_preference" android:title="Text field" android:defaultValue="" android:inputType="text"/>
+        <SwitchPreference app:iconSpaceReserved="false" android:key="enabled_preference" android:title="Switch field" android:summary="Blah blah" android:defaultValue="false" />
+        <EditTextPreference app:iconSpaceReserved="false" android:key="text_password_preference" android:title="Password field" android:defaultValue="" android:inputType="text" android:password="true"/>        
+    </PreferenceCategory>
 </androidx.preference.PreferenceScreen>
