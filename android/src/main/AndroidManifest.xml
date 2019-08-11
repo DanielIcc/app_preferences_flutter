@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.danielisho.app_preferences_flutter">
   <application android:theme="@style/AppTheme">
-    <activity android:name=".PreferencesActivity" android:label="@string/app_name" />
+    <activity android:name="com.danielisho.app_preferences_flutter.PreferencesActivity" android:label="@string/app_name" />
   </application>
 </manifest>

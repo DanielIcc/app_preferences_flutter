@@ -1,3 +1,6 @@
+## 1.0.1
+* Fix AndroidManifest.xml
+
 ## 1.0.0
 * Using androidx.preference.PreferenceScreen
 

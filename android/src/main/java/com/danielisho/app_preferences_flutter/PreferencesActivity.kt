@@ -14,7 +14,7 @@ class PreferencesActivity: AppCompatActivity(){
 
                 supportActionBar!!.setDisplayHomeAsUpEnabled(true)
                 supportActionBar!!.setHomeButtonEnabled(true)
-
+                
                 supportFragmentManager
                         .beginTransaction()
                         .replace(R.id.settings, PreferencesFragment())
