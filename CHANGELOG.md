@@ -1,4 +1,7 @@
-## 0.1.0
+## 1.0.0
+* Using androidx.preference.PreferenceScreen
+
+## 0.2.0
 * Migrating androidx
 
 ## 0.1.0

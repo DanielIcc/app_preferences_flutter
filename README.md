@@ -16,5 +16,5 @@ Plugin for open and save native preferences on Android, TODO: iOS version
     
 ## License
 
-Apache License Version 2.0, August 2019
+Apache License Version 2.0, January 2004
 

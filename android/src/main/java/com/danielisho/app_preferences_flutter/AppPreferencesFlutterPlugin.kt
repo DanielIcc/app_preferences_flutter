@@ -3,15 +3,13 @@ package com.danielisho.app_preferences_flutter
 import android.app.Activity
 import android.content.Intent
 
+
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.PluginRegistry
 import io.flutter.plugin.common.PluginRegistry.Registrar
-
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 class AppPreferencesFlutterPlugin(val activity: Activity): MethodCallHandler {
   companion object {
@@ -28,10 +26,9 @@ class AppPreferencesFlutterPlugin(val activity: Activity): MethodCallHandler {
 
   override fun onMethodCall(call: MethodCall, result: Result) {
     if (call.method.equals("openPreferences")) {      
-      showPreferences();
+        showPreferences()
     } else if (call.method.equals("getValue")) {
-        val value = getValue(call.arguments.toString());
-        result.success(value)
+        result.success(call.arguments.toString())
     } else {
       result.notImplemented()
     }
@@ -42,10 +39,6 @@ class AppPreferencesFlutterPlugin(val activity: Activity): MethodCallHandler {
         activity.startActivityForResult(intent, 100)
     }
 
-    private fun getValue(key: String): String {
-        val preferencias = PreferenceManager.getDefaultSharedPreferences(activity)
-        val allPrefs = preferencias.all
-    return allPrefs[key]!!.toString()
-    }
+
 
 }

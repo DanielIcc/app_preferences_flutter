@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory android:title="Párametros de conexión">
-        <EditTextPreference android:key="text_preference" android:title="Text field" android:defaultValue="" android:inputType="text"/>
-        <SwitchPreference android:key="enabled_preference" android:title="Switch field" android:summary="Blah blah" android:defaultValue="false" />
-        <EditTextPreference android:key="text_password_preference" android:title="Password field" android:defaultValue="" android:inputType="text" android:password="true"/>
-    </PreferenceCategory>
-</PreferenceScreen>
+<androidx.preference.PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="notifications"
+        app:title="Switch preference"/>
+
+    <Preference
+        app:key="feedback"
+        app:title="Send feedback"
+        app:summary="Report technical issues or suggest new features"/>
+
+</androidx.preference.PreferenceScreen>
