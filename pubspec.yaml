@@ -1,8 +1,8 @@
 name: app_preferences_flutter
 description: Plugin for open and save native preferences on Android and iOS.
-version: 0.1.0
-author:
-homepage:
+version: 0.2.0
+author: Daniel de León
+homepage: https://github.com/DanielIcc/app_preferences_flutter
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
