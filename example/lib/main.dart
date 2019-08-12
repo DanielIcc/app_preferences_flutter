@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
             ),
             RaisedButton(
               child: Text("Open preferences screen"),
-              onPressed: () => AppPreferencesFlutter.openPreferences,
+              onPressed: () async => await AppPreferencesFlutter.openPreferences(),
             ),
             RaisedButton(
               child: Text("Get values"),

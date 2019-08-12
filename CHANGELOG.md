@@ -1,3 +1,6 @@
+## 1.2.1
+* Fix openPreferences() method
+
 ## 1.2.0
 * Changing androidx preferences to takisoft  https://github.com/takisoft/preferencex-android
 
