@@ -1,8 +1,7 @@
 <androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" 
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory app:iconSpaceReserved="false" android:title="Example Category">
-        <EditTextPreference app:iconSpaceReserved="false" android:key="text_preference" android:title="Text field" android:defaultValue="" android:inputType="text"/>
-        <SwitchPreference app:iconSpaceReserved="false" android:key="enabled_preference" android:title="Switch field" android:summary="Blah blah" android:defaultValue="false" />
-        <EditTextPreference app:iconSpaceReserved="false" android:key="text_password_preference" android:title="Password field" android:defaultValue="" android:inputType="text" android:password="true"/>        
+        <EditTextPreference app:iconSpaceReserved="false" android:key="text_preference" android:title="Text field" android:defaultValue="" android:inputType="text"/>        
+        <EditTextPreference app:iconSpaceReserved="false" android:key="text_password_preference" android:title="Password text field" android:defaultValue="" android:inputType="text" android:password="true"/>        
     </PreferenceCategory>
 </androidx.preference.PreferenceScreen>

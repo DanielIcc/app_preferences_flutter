@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
           children: <Widget>[
             Center(child: Text(a.toString())),
             Center(child: Text(b.toString())),
-            Center(child: Text(c.toString())),
+            // Center(child: Text(c.toString())),
             Padding(
               padding: EdgeInsets.all(10),
             ),
@@ -40,8 +40,9 @@ class _MyAppState extends State<MyApp> {
               child: Text("Get values"),
               onPressed: () async {
                 a = await AppPreferencesFlutter.getValue("text_preference");
-                b = await AppPreferencesFlutter.getValue("enabled_preference");
-                c = await AppPreferencesFlutter.getValue("text_password_preference");
+                b = await AppPreferencesFlutter.getValue("text_password_preference");
+                // c = await AppPreferencesFlutter.getValue("tokenAF");
+                print(a);
                 setState(() {});
               },
             ),

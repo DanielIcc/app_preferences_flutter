@@ -1,0 +1,22 @@
+PODS:
+  - app_preferences_flutter (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - app_preferences_flutter (from `.symlinks/plugins/app_preferences_flutter/ios`)
+  - Flutter (from `.symlinks/flutter/ios`)
+
+EXTERNAL SOURCES:
+  app_preferences_flutter:
+    :path: ".symlinks/plugins/app_preferences_flutter/ios"
+  Flutter:
+    :path: ".symlinks/flutter/ios"
+
+SPEC CHECKSUMS:
+  app_preferences_flutter: aaf8b81dae9b6e24365940543bc87b660fc06e02
+  Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
+
+PODFILE CHECKSUM: d06e2aa2257fa8865cd32463d6a318d881ee2c0b
+
+COCOAPODS: 1.6.1
