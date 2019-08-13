@@ -10,10 +10,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String a = "";
-  String b = "";
-  String c = "";
-  String d = "";
-  String e = "";
+  bool b = false;
 
   @override
   Widget build(BuildContext context) {
@@ -34,15 +31,16 @@ class _MyAppState extends State<MyApp> {
             ),
             RaisedButton(
               child: Text("Open preferences screen"),
-              onPressed: () async => await AppPreferencesFlutter.openPreferences(),
+              onPressed: () async =>
+                  await AppPreferencesFlutter.openPreferences(),
             ),
             RaisedButton(
               child: Text("Get values"),
               onPressed: () async {
-                a = await AppPreferencesFlutter.getValue("text_preference");
-                b = await AppPreferencesFlutter.getValue("text_password_preference");
-                // c = await AppPreferencesFlutter.getValue("tokenAF");
+                a = await AppPreferencesFlutter.getValue("name_preference");
+                b = await AppPreferencesFlutter.getValue("enabled_preference");
                 print(a);
+                print(b);
                 setState(() {});
               },
             ),

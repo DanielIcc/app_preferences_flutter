@@ -32,8 +32,9 @@ class AppPreferencesFlutterPlugin(val activity: Activity): MethodCallHandler {
     if (call.method.equals("openPreferences")) {      
         showPreferences()
     } else if (call.method.equals("getValue")) {
-        val value = getValue(call.arguments.toString())
-        result.success(value)
+        val preferencias = PreferenceManager.getDefaultSharedPreferences(activity)
+        val allPrefs = preferencias.all
+        result.success(allPrefs[call.arguments.toString()])
     } else {
       result.notImplemented()
     }
@@ -44,12 +45,5 @@ class AppPreferencesFlutterPlugin(val activity: Activity): MethodCallHandler {
     activity.startActivityForResult(intent, 100)
     
   }
-
-  private fun getValue(key: String): String {
-      val preferencias = PreferenceManager.getDefaultSharedPreferences(activity)
-      val allPrefs = preferencias.all
-      return allPrefs[key]!!.toString()
-  }
-
 
 }

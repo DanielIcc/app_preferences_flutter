@@ -1,4 +1,7 @@
 ## 1.2.1
+* iOS support
+
+## 1.2.1
 * Fix openPreferences() method
 
 ## 1.2.0
