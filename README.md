@@ -5,7 +5,7 @@ Plugin for open and save native preferences on Android and iOS
 
 ## iOS Prerequisites
 
-* Create iOS Settings.bundle files in App_Resources/iOS [example](https://github.com/DanielIcc/app_preferences_flutter/tree/master/example/ios/Runner/Settings.bundle)
+* Create iOS Settings.bundle files in iOS/Runner [example](https://github.com/DanielIcc/app_preferences_flutter/tree/master/example/ios/Runner/Settings.bundle)
 or [Apple Developer docs](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
 
 ## Android Prerequisites
