@@ -1,3 +1,5 @@
+## 1.3.2
+* Refactor folder proyect android from java to kotlin
 ## 1.3.1
 * Documentation update
 
